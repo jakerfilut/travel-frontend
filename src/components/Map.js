@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 
 function Map({ setChildClicked, setCoords, setBounds, coords }) {
   return (
-    <div style={{ height: "50vh", width: "100%" }}>
+    <div style={{ height: "100vh", width: "100vh" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCpNymnOeCavZbbvnMFuF947dI0oBGr2H0" }}
         defaultCenter={{ lat: 0, lng: 0 }}

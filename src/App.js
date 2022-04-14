@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import List from "./components/List";
 // import { getPlacesData } from "./api/Api";
 import axios from "axios";
+import "./app.css";
 
 function App() {
   const [places, setPlaces] = useState([]);
@@ -57,16 +58,20 @@ function App() {
     <div className="App">
       <div>Test</div>
       <div>
-        <SearchBar coords={coords} setCoords={setCoords} />
-        {places.map((place) => (
-          <List key={Math.random()} place={place} />
-        ))}
-        <Map
-          setCoords={setCoords}
-          setBounds={setBounds}
-          coords={coords}
-          setChildClicked={setChildClicked}
-        />
+        <div class="split left">
+          <SearchBar coords={coords} setCoords={setCoords} />
+          {places.map((place) => (
+            <List key={Math.random()} place={place} />
+          ))}
+        </div>
+        <div class="split right">
+          <Map
+            setCoords={setCoords}
+            setBounds={setBounds}
+            coords={coords}
+            setChildClicked={setChildClicked}
+          />
+        </div>
       </div>
     </div>
   );
