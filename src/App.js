@@ -59,7 +59,7 @@ function App() {
       <div>Test</div>
       <div>
         <div class="split left">
-          <SearchBar coords={coords} setCoords={setCoords} />
+          <SearchBar setType={setType} coords={coords} setCoords={setCoords} />
           {places.map((place) => (
             <List key={Math.random()} place={place} />
           ))}
